@@ -1,0 +1,365 @@
+@font-face {
+	font-family: 'Apercu';
+	src: url('../fonts/Apercu-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Apercu';
+	src: url('../fonts/Apercu-Medium.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Apercu';
+	src: url('../fonts/Apercu-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+html, body {
+    background-color: #000;
+}
+
+*, .title, .subtitle {
+    font-family: 'Apercu';
+    font-weight: 300;
+    color: rgba(237, 249, 251, 0.8);
+}
+
+
+.mt-6vh {
+    margin-top: 6vh;
+}
+
+.mt-10vh {
+    margin-top: 10vh;
+}
+
+.no-max-width {
+    max-width: none;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.nora-panel {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.nora-panel.first {
+    background-image: url('../img/1.jpg');
+    background-position: 0% 60%;
+}
+
+.nora-panel.second {
+    background-image: url('../img/2.jpg');
+}
+
+.nora-panel.third {
+    background-image: url('../img/3.jpg');
+}
+
+.nora-panel.fourth {
+    background-image: url('../img/4.jpg');
+    background-position: 50% 100%;
+}
+
+.nora-panel.fifth {
+    background-image: url('../img/5.jpg');
+    background-position: 50% 10%;
+}
+
+.nora-panel.sixth {
+    background-image: url('../img/6.jpg');
+}
+
+@media only screen and (max-width: 568px) {
+    .nora-panel {
+        background-size: cover !important;
+    }
+}
+
+.hero-logo {
+    width: 200px;
+    height: auto;
+    margin-top: 6vh;
+}
+
+.hero-title.subtitle {
+    font-size: 36px;
+    margin-top: 6vh;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-title.subtitle {
+        font-size: 24px;
+    }
+}
+
+.hero-book {
+    margin-bottom: 6vh;
+    font-size: 34px;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-book {
+        font-size: 20px;
+    }
+}
+
+.hero-copy {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.booking-content .hero-copy {
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-copy {
+        font-size: 18px;
+    }
+
+    .booking-content .hero-copy {
+        font-size: 16px;
+    }
+}
+
+.fl-right {
+    float: right;
+}
+
+.fl-left {
+    float: left;
+}
+
+.menu-bar {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 200ms ease-out;
+    box-sizing: border-box;
+    padding-left: 11px;
+    padding-right: 11px;
+    z-index: 100;
+    transform: translateY(-100%);
+}
+
+.menu-bar .book-button, .menu-bar .voucher-button {
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 568px) {
+    .menu-bar .book-button, .menu-bar .voucher-button {
+        font-size: 16px;
+    }
+}
+
+.hero-book.book-button {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    line-height: 52px;
+    display: inline-block;
+}
+
+.book-button, .hero-book, .footer i, .buy-voucher, .voucher-button {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 200ms ease-out;
+}
+
+
+.menu-bar .book-button:hover, .menu-bar .voucher-button:hover, .hero-book:hover, .footer i:hover, .buy-voucher:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.menu-bar .level {
+    line-height: 60px;
+}
+
+.menu-logo {
+    width: 100px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.bar-left.fl-left {
+    line-height: 60px;
+}
+
+@media only screen and (max-width: 568px) {
+    .menu-logo {
+        width: 70px;
+    }
+}
+
+.booking-logo {
+    width: 160px;
+    height: auto;
+    margin-top: 11px;
+    padding-bottom: 24px;
+}
+
+.content-stage {
+    width: 100%;
+}
+
+.booking-content {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    margin-top: -100vh;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    display: none;
+}
+
+.main-content {
+    transition: transform 200ms ease-out;
+    overflow-x: hidden;
+    z-index: 10;
+    width: 100%;
+}
+
+.main-content.toggled {
+    transform: translateY(200px);
+}
+
+.sixth .columns {
+    box-sizing: border-box;
+}
+
+.fifth .hero-copy {
+    margin-top: 10vh;
+}
+
+@media only screen and (max-width: 568px) {
+    .fifth .hero-copy {
+        margin-top: 60vh;
+    }
+}
+
+.booking-spacer {
+    height: 60px;
+    width: 100%;
+    display: block;
+}
+
+.quote {
+    float: right;
+    clear: both;
+    margin-top: 12px;
+}
+
+@media only screen and (min-width: 568px) {
+    .no-wrap {
+        white-space: nowrap;
+    }
+}
+
+
+.column {
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+@media screen and (min-width: 769px) {
+    .left-padded {
+        padding-left: 40px;
+        box-sizing: border-box;
+    }
+}
+
+
+.book-button, .voucher-button {
+    padding-left: 12px;
+    padding-right: 12px;
+    user-select: none;
+    cursor: pointer;
+    line-height: 60px;
+}
+
+.spacer {
+    width: 100%;
+    height: 50px;
+    display: block;
+    clear: both;
+}
+
+.booking-placeholder {
+    width: 400px;
+}
+
+.footer {
+    background-color: #011c27;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.footer a, .footer a[href^=tel] {
+    text-decoration: none;
+    border: none;
+    color: #FFF;
+}
+
+.footer i {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .column {
+    text-align: center !important;
+    font-size: 16px;
+  }
+}
+
+.background-cover {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.7;
+    position: absolute;
+}
+
+.buy-voucher {
+    user-select: none;
+    cursor: pointer;
+}
+
+.booking-text {
+    display: none;
+}
+
+/*.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}*/
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned, .headroom--top {
+    transform: translateY(-100%);
+}
+
+.menu-bar.toggled, .headroom--unpinned.toggled {
+    transform: translateY(0%) !important;
+    z-index: 200;
+}
