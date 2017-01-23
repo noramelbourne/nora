@@ -51,6 +51,10 @@ html, body {
     background-position: center center;
     position: relative;
 }
+.nora-panel.book {
+    background-image: url('../img/7.jpg');
+    background-position: 0% 60%;
+}
 
 .nora-panel.first {
     background-image: url('../img/1.jpg');
