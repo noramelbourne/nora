@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    function isIOS() {
+        return /iP(ad|hone|od).+Version\/[\d\.]+.*Safari/i.test(navigator.userAgent);
+    }
+
     var isMenuShowing = false;
     var isToggled = false;
     var isToggleFinished = false;
@@ -9,11 +13,18 @@ $(document).ready(function () {
     var scrollDistanceUp = 0;
     var scrollDistanceDown = 0;
 
+    var mainScrollPosition;
+
     var toggleBooking = function (isVoucher) {
         //$('.main-content').toggleClass('toggled');
         var height = $(window).innerHeight();
         var toggleOffset = $('.main-content').scrollTop() > 300 ? (height - menuHeight) : height;
         if (window.innerWidth < 568) toggleOffset += 60;
+
+        if (isIOS())
+            $(window).scrollTop(mainScrollPosition);
+
+
         if (isToggled) {
             $('.booking-content').removeClass('toggled').velocity({ translateY: 0 }, 500, "swing", function () {
                 //$('.booking-content').fadeOut();
@@ -28,6 +39,10 @@ $(document).ready(function () {
             $('.menu-bar .voucher-button').show();
             $('.menu-bar .menu-logo').show();
         } else {
+            if (isIOS()) {
+                mainScrollPosition = $(window).scrollTop();
+                $(window).scrollTop(0);
+            }
             $('.booking-content').show();
             isVoucher ? $('#voucher_frame').show() : $('#booking_frame').show();
             isVoucher ? $('.booking-text').hide() : $('.booking-text').show();
@@ -73,30 +88,6 @@ $(document).ready(function () {
         }
 
     }
-
-    $('.main-content').scroll(function () {
-
-        // var position = $(this).scrollTop();
-
-        // if (position < scrollPivot) {
-        //     if (scrollDistanceUp == null) {
-        //         scrollDistanceUp = 0
-        //         scrollPivot = position;
-        //         scrollDistanceDown = null;
-        //     }
-
-        //     scrollDistanceUp = scrollPivot - position
-        // }
-
-        // if (isToggled)
-        //     return;
-
-        // if ($(this).scrollTop() > 300) {
-        //     showMenu();
-        // } else {
-        //     hideMenu();
-        // }
-    })
 
     var percentageToOpacity = function (percentage, offset) {
         var distance = (percentage * 100);

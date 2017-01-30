@@ -170,7 +170,7 @@ html, body {
     }
 }
 
-.hero-book.book-button {
+.hero-book.book-button, .hero-book.voucher-button {
     border: 1px solid rgba(255, 255, 255, 0.25);
     line-height: 52px;
     display: inline-block;
