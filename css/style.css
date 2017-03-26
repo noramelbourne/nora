@@ -367,3 +367,18 @@ html, body {
     transform: translateY(0%) !important;
     z-index: 200;
 }
+
+.flex-center-left, .flex-center-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 769px) {
+    .flex-center-left {
+        justify-content: flex-start;
+    }
+    .flex-center-right {
+        justify-content: flex-end;
+    }
+}
