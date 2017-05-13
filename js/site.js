@@ -16,7 +16,7 @@ $(document).ready(function () {
     var mainScrollPosition;
 
     $(window).scroll(function () {
-        if (isToggled)
+        if (isToggled && isIOS())
             $(window).scrollTop(0);
     });
 
