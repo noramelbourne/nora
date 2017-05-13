@@ -15,6 +15,11 @@ $(document).ready(function () {
 
     var mainScrollPosition;
 
+    $(window).scroll(function () {
+        if (isToggled)
+            $(window).scrollTop(0);
+    });
+
     var toggleBooking = function (isVoucher) {
         //$('.main-content').toggleClass('toggled');
         var height = $(window).innerHeight();
