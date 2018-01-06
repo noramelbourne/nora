@@ -100,9 +100,22 @@ html, body {
     margin-top: 6vh;
 }
 
+.hero-message.subtitle {
+    font-size: 24px;
+    margin-top: 16vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 @media only screen and (max-width: 768px) {
     .hero-title.subtitle {
         font-size: 24px;
+    }
+    .hero-message.subtitle {
+        font-size: 18px;
+        margin-top: 16vh;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -381,4 +394,8 @@ html, body {
     .flex-center-right {
         justify-content: flex-end;
     }
+}
+
+.book-button, .voucher-button, .hero-book {
+    display: none !important;
 }
